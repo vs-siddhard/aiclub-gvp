@@ -1,6 +1,6 @@
 import type { TeamMember } from '../shared/schema';
 
-export const teamMembers: TeamMember[] = [
+const currentMembers: TeamMember[] = [
   {
    id: 1,
     name: 'Dr. D Uma Devi',
@@ -305,4 +305,167 @@ export const teamMembers: TeamMember[] = [
     imageUrl: '/images/team/sitasirisha.jpeg'
 
   }
+];
+
+const coreLeads2026 = currentMembers
+  .filter((member) => member.category === 'core' && member.id >= 8 && member.id <= 23)
+  .map((member, index): TeamMember => ({
+    ...member,
+    id: 38 + index,
+    category: 'core2026leads',
+    role: member.id === 10 ? 'President' : member.id === 11 ? 'Secretary' : member.role.trim(),
+    description: 'AI Club lead for the 2026-27 academic year.',
+  }));
+
+const coreTeams2026: TeamMember[] = [
+  {
+    id: 54,
+    name: 'Mohan Sai Krishna',
+    role: 'President',
+    category: 'core2026teams',
+    description: 'Core Team member for the 2026-27 academic year.',
+    avatarColor: '#0891b2',
+  },
+  {
+    id: 55,
+    name: 'Sarvani Polam',
+    role: 'Secretary',
+    category: 'core2026teams',
+    description: 'Core Team member for the 2026-27 academic year.',
+    avatarColor: '#059669',
+  },
+  {
+    id: 56,
+    name: 'Chaitanya',
+    role: 'Technical Team',
+    category: 'core2026teams',
+    description: 'Core Team member for the 2026-27 academic year.',
+    avatarColor: '#06b6d4',
+  },
+  {
+    id: 57,
+    name: 'Likitha',
+    role: 'Technical Team',
+    category: 'core2026teams',
+    description: 'Core Team member for the 2026-27 academic year.',
+    avatarColor: '#0891b2',
+  },
+  {
+    id: 58,
+    name: 'Karthikeya',
+    role: 'Technical Team',
+    category: 'core2026teams',
+    description: 'Core Team member for the 2026-27 academic year.',
+    avatarColor: '#059669',
+  },
+  {
+    id: 59,
+    name: 'D. Hiranmai',
+    role: 'Editorial Team',
+    category: 'core2026teams',
+    description: 'Core Team member for the 2026-27 academic year.',
+    avatarColor: '#06b6d4',
+  },
+  {
+    id: 60,
+    name: 'T. Jaswanth',
+    role: 'Editorial Team',
+    category: 'core2026teams',
+    description: 'Core Team member for the 2026-27 academic year.',
+    avatarColor: '#0891b2',
+  },
+  {
+    id: 61,
+    name: 'M. Sowmya',
+    role: 'Editorial Team',
+    category: 'core2026teams',
+    description: 'Core Team member for the 2026-27 academic year.',
+    avatarColor: '#059669',
+  },
+  {
+    id: 62,
+    name: 'Padmalochan',
+    role: 'Creative Content Team',
+    category: 'core2026teams',
+    description: 'Core Team member for the 2026-27 academic year.',
+    avatarColor: '#06b6d4',
+  },
+  {
+    id: 63,
+    name: 'Nischal',
+    role: 'Creative Content Team',
+    category: 'core2026teams',
+    description: 'Core Team member for the 2026-27 academic year.',
+    avatarColor: '#0891b2',
+  },
+  {
+    id: 64,
+    name: 'Sohit Kumar',
+    role: 'Creative Content Team',
+    category: 'core2026teams',
+    description: 'Core Team member for the 2026-27 academic year.',
+    avatarColor: '#059669',
+  },
+  {
+    id: 65,
+    name: 'Vishnu',
+    role: 'Logistics Team',
+    category: 'core2026teams',
+    description: 'Core Team member for the 2026-27 academic year.',
+    avatarColor: '#06b6d4',
+  },
+  {
+    id: 66,
+    name: 'Likith',
+    role: 'Logistics Team',
+    category: 'core2026teams',
+    description: 'Core Team member for the 2026-27 academic year.',
+    avatarColor: '#0891b2',
+  },
+  {
+    id: 67,
+    name: 'D. Thanushya',
+    role: 'Logistics Team',
+    category: 'core2026teams',
+    description: 'Core Team member for the 2026-27 academic year.',
+    avatarColor: '#059669',
+  },
+  {
+    id: 68,
+    name: 'L. Eswara Lakshmi',
+    role: 'Logistics Team',
+    category: 'core2026teams',
+    description: 'Core Team member for the 2026-27 academic year.',
+    avatarColor: '#06b6d4',
+  },
+  {
+    id: 69,
+    name: 'Hemanth',
+    role: 'PR and Media Team',
+    category: 'core2026teams',
+    description: 'Core Team member for the 2026-27 academic year.',
+    avatarColor: '#0891b2',
+  },
+  {
+    id: 70,
+    name: 'Dharma Teja',
+    role: 'PR and Media Team',
+    category: 'core2026teams',
+    description: 'Core Team member for the 2026-27 academic year.',
+    avatarColor: '#059669',
+  },
+  {
+    id: 71,
+    name: 'Farhan',
+    role: 'PR and Media Team',
+    category: 'core2026teams',
+    description: 'Core Team member for the 2026-27 academic year.',
+    avatarColor: '#06b6d4',
+  },
+];
+
+export const teamMembers: TeamMember[] = [
+  ...currentMembers,
+  ...coreLeads2026,
+  ...coreTeams2026,
 ];

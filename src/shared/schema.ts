@@ -2,7 +2,7 @@ export interface TeamMember {
   id: number;
   name: string;
   role: string;
-  category: 'faculty' | 'student' | 'core' | 'all' | 'pastcoordinators' | 'pastmembers';
+  category: 'faculty' | 'student' | 'core' | 'core2026leads' | 'core2026teams' | 'all' | 'pastcoordinators' | 'pastmembers';
   description: string;
   linkedin?: string;
   image?: string;

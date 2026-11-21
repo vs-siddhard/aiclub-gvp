@@ -25,7 +25,7 @@ import { CardContainer, CardBody, CardItem } from './ui/3d-card';
 const categories = [
 
   { id: 'faculty', label: 'Department Faculty' },
- 
+  { id: 'core2026', label: 'Core Team (2026-2027)' },
   { id: 'pastmembers', label: 'Past Members - 2025-26' },
   { id: 'pastcoordinators', label: 'Past Coordinators' },
 ];
@@ -57,8 +57,16 @@ export default function Team() {
   const teamMembers = allMembers.filter((member) =>
     activeCategory === 'pastmembers'
       ? member.category === 'core' || member.category === 'pastmembers'
+      : activeCategory === 'core2026'
+        ? member.category === 'core2026leads' || member.category === 'core2026teams'
       : member.category === activeCategory
   );
+  const memberSections = activeCategory === 'core2026'
+    ? [
+        { id: 'leads', title: 'Leads', members: teamMembers.filter((member) => member.category === 'core2026leads') },
+        { id: 'teams', title: 'Teams', members: teamMembers.filter((member) => member.category === 'core2026teams') },
+      ]
+    : [{ id: activeCategory, title: '', members: teamMembers }];
 
   const getInitials = (name: string) => {
     return name.split(' ').map(n => n[0]).join('');
@@ -850,8 +858,15 @@ export default function Team() {
         </motion.div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {teamMembers.map((member, index) => (
+        {memberSections.map((section) => (
+          <div key={section.id} className="mb-16 last:mb-0">
+            {section.title && (
+              <h3 className="text-center text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-[#0891b2] to-[#059669] bg-clip-text text-transparent">
+                {section.title}
+              </h3>
+            )}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {section.members.map((member, index) => (
             <motion.div
               key={member.id}
               initial={{ opacity: 0, scale: 0.9 }}
@@ -1130,6 +1145,7 @@ export default function Team() {
                     )}
 
                     {/* LinkedIn*/}
+                    {member.linkedin && (
                     <CardItem translateZ="70" className="flex justify-center">
                       <motion.a
                         href={member.linkedin}
@@ -1258,12 +1274,15 @@ export default function Team() {
                         />
                       </motion.a>
                     </CardItem>
+                    )}
                   </div>
                 </CardBody>
               </CardContainer>
             </motion.div>
           ))}
-        </div>
+            </div>
+          </div>
+        ))}
         </motion.div>
       )}
       </div>
