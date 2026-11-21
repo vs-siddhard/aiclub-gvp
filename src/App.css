@@ -14,3 +14,85 @@ body {
 	margin: 0;
 	font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
+
+html.dark {
+	color-scheme: dark;
+	background: #020617;
+}
+
+html.dark body,
+html.dark #root,
+html.dark #root > div {
+	background: #020617;
+	color: #e2e8f0;
+}
+
+html.dark nav,
+html.dark [data-testid="drawer-mobile-menu"] {
+	background: rgba(15, 23, 42, 0.96) !important;
+	border-color: #1e293b !important;
+	backdrop-filter: blur(16px);
+}
+
+html.dark #home,
+html.dark #mission-vision,
+html.dark #objectives,
+html.dark #activities,
+html.dark #team,
+html.dark #editorials-simple {
+	background-image: linear-gradient(135deg, #020617 0%, #0f172a 55%, #082f49 100%) !important;
+}
+
+html.dark .bg-white,
+html.dark .bg-white\/80,
+html.dark .bg-white\/95 {
+	background-color: #111827 !important;
+	color: #e2e8f0;
+}
+
+html.dark [class*="rounded-2xl"][class*="shadow"],
+html.dark [class*="rounded-3xl"][class*="shadow"] {
+	box-shadow: 0 18px 50px rgba(0, 0, 0, 0.32), 0 0 25px rgba(8, 145, 178, 0.08);
+}
+
+html.dark article,
+html.dark #team [class*="group/card"],
+html.dark #activities [class*="bg-white"],
+html.dark #editorials-simple article,
+html.dark #mission-vision article,
+html.dark #objectives article {
+	background-color: rgba(17, 24, 39, 0.96) !important;
+	border-color: #1e293b !important;
+}
+
+html.dark .theme-toggle,
+html.dark [class*="bg-[#f1f5f9]"] {
+	background-color: #1e293b !important;
+	color: #cbd5e1 !important;
+}
+
+html.dark [class*="text-[#475569]"],
+html.dark [class*="text-[#64748b]"],
+html.dark [class*="text-[#0f172a]"] {
+	color: #cbd5e1 !important;
+}
+
+html.dark [class*="text-gray-700"],
+html.dark [class*="text-gray-900"] {
+	color: #e2e8f0 !important;
+}
+
+html.dark [class*="border-gray-100"],
+html.dark [class*="border-gray-200"],
+html.dark [class*="border-[#e2e8f0]"],
+html.dark [class*="border-cyan-100"],
+html.dark [class*="border-emerald-100"] {
+	border-color: #334155 !important;
+}
+
+html.dark #team [class*="bg-[#f1f5f9]"],
+html.dark [class*="bg-gray-50"],
+html.dark [class*="bg-cyan-50"],
+html.dark [class*="bg-emerald-50"] {
+	background-color: #1e293b !important;
+}
