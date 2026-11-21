@@ -26,10 +26,8 @@ const categories = [
 
   { id: 'faculty', label: 'Department Faculty' },
  
-  { id: 'core', label: 'Core Team' },
-
+  { id: 'pastmembers', label: 'Past Members - 2025-26' },
   { id: 'pastcoordinators', label: 'Past Coordinators' },
-  // { id: 'pastmembers', label: 'Past Members' }
 ];
 
 const techCursors = [
@@ -56,7 +54,11 @@ export default function Team() {
     queryFn: async () => localTeamMembers as unknown as TeamMember[],
   });
 
-  const teamMembers = allMembers.filter(member => member.category === activeCategory);
+  const teamMembers = allMembers.filter((member) =>
+    activeCategory === 'pastmembers'
+      ? member.category === 'core' || member.category === 'pastmembers'
+      : member.category === activeCategory
+  );
 
   const getInitials = (name: string) => {
     return name.split(' ').map(n => n[0]).join('');
@@ -992,7 +994,20 @@ export default function Team() {
                         </span>
                       </motion.span>
                     </CardItem>
-                    
+
+                    {activeCategory === 'pastmembers' && (
+                      <CardItem
+                        translateZ="55"
+                        as="div"
+                        className="mb-2"
+                        data-testid={`text-member-academic-year-${member.id}`}
+                      >
+                        <span className="inline-flex rounded-full bg-[#ecfdf5] px-3 py-1 text-xs font-bold text-[#047857] border border-[#a7f3d0]">
+                          Academic Year: 2025-26
+                        </span>
+                      </CardItem>
+                    )}
+
                     <CardItem
                       translateZ="50"
                       as="div"
