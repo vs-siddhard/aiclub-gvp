@@ -260,31 +260,6 @@ const currentMembers: TeamMember[] = [
     description: 'Building and nurturing our vibrant AI community.',
     linkedin: 'https://www.linkedin.com/in/srisaiharshitagollapalli  ',
     imageUrl: '/images/team/harshitha.jpg'
-  },{
-    id: 33,
-    name: 'P.Sai Siva Kumar',
-    role: 'Logistics & Hospitality',
-    category: 'core',
-    description: 'Building and nurturing our vibrant AI community.',
-    linkedin: 'https://www.linkedin.com/in/sai-pandrinki-b11aa4394?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
-    imageUrl: '/images/team/shivakumar.jpg'
-  },{
-    id: 34,
-    name: 'V.Harsha Vardhan ',
-    role: 'Logistics & Hospitality',
-    category: 'core',
-    description: 'Building and nurturing our vibrant AI community.',
-    linkedin: 'https://www.linkedin.com/in/harsha-vardhan-881737395',
- 
-    imageUrl: '/images/team/vaedhan.jpeg'
-  },{
-    id: 35,
-    name: 'G.Prabhas',
-    role: 'Executive Head',
-    category: 'core',
-    description: 'Building and nurturing our vibrant AI community.',
-    linkedin: 'https://www.linkedin.com/in/prabhas-gamini-85a93a2b7/',
-    imageUrl: '/images/team/prabhas.jpeg'
   },
   {
     id: 36,
@@ -301,7 +276,7 @@ const currentMembers: TeamMember[] = [
     category: 'core2026leads',
     description: 'Building and nurturing our vibrant AI community.',
     linkedin: 'https://www.linkedin.com/in/shanmukhasai-gembali-9280ab334?utm_source=share_via&utm_content=profile&utm_medium=member_android',
-    imageUrl: '/images/team/Jetti Ganesh chowdary.jpg'
+    avatarColor: '#0891b2'
   },
   {
     id: 38,
@@ -319,36 +294,9 @@ const currentMembers: TeamMember[] = [
     category: 'core2026leads',
     description: 'Building and nurturing our vibrant AI community.',
     linkedin: 'https://aiml-clubwebsite-dlzn.vercel.app/',
-    imageUrl: '/images/team/Jetti Ganesh chowdary.jpg'
+    avatarColor: '#059669'
   },
 ];
-
-const coreLeadRoles2026: Record<number, string> = {
-  10: 'President',
-  11: 'Secretary',
-  24: 'Technical Lead',
-  25: 'Technical Lead',
-  26: 'Creative Content Lead',
-  27: 'Creative Content Lead',
-  28: 'Editorial Lead',
-  29: 'Editorial Lead',
-  30: 'PR & Media Lead',
-  31: 'PR & Media Lead',
-  32: 'PR & Media Lead',
-  33: 'Logistics & Hospitality Lead',
-  34: 'Logistics & Hospitality Lead',
-  35: 'Treasurer',
-};
-
-const coreLeads2026 = currentMembers
-  .filter((member) => member.category === 'core' && member.id in coreLeadRoles2026)
-  .map((member, index): TeamMember => ({
-    ...member,
-    id: 38 + index,
-    category: 'core2026leads',
-    role: coreLeadRoles2026[member.id],
-    description: 'AI Club lead for the 2026-27 academic year.',
-  }));
 
 const coreTeams2026: TeamMember[] = [
   {
@@ -499,6 +447,5 @@ const coreTeams2026: TeamMember[] = [
 
 export const teamMembers: TeamMember[] = [
   ...currentMembers,
-  ...coreLeads2026,
   ...coreTeams2026,
 ];
