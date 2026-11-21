@@ -307,13 +307,27 @@ const currentMembers: TeamMember[] = [
   }
 ];
 
+const coreLeadRoles2026: Record<number, string> = {
+  10: 'President',
+  11: 'Secretary',
+  24: 'Technical Lead',
+  25: 'Technical Lead',
+  26: 'Creative Content Lead',
+  27: 'Creative Content Lead',
+  28: 'Editorial Lead',
+  29: 'Editorial Lead',
+  30: 'PR & Media Lead',
+  31: 'PR & Media Lead',
+  32: 'PR & Media Lead',
+};
+
 const coreLeads2026 = currentMembers
-  .filter((member) => member.category === 'core' && member.id >= 8 && member.id <= 23)
+  .filter((member) => member.category === 'core' && member.id in coreLeadRoles2026)
   .map((member, index): TeamMember => ({
     ...member,
     id: 38 + index,
     category: 'core2026leads',
-    role: member.id === 10 ? 'President' : member.id === 11 ? 'Secretary' : member.role.trim(),
+    role: coreLeadRoles2026[member.id],
     description: 'AI Club lead for the 2026-27 academic year.',
   }));
 
