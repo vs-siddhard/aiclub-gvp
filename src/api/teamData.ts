@@ -298,18 +298,27 @@ const currentMembers: TeamMember[] = [
     id: 37,
     name: 'G. Shanmukha Sai ',
     role: 'Technical Lead',
-    category: 'core',
+    category: 'core2026leads',
     description: 'Building and nurturing our vibrant AI community.',
     linkedin: 'https://www.linkedin.com/in/shanmukhasai-gembali-9280ab334?utm_source=share_via&utm_content=profile&utm_medium=member_android',
-    imageUrl: '/images/team/prabhas.jpeg'
+    imageUrl: '/images/team/Jetti Ganesh chowdary.jpg'
   },
   {
     id: 38,
     name: 'J. Ganesh',
     role: 'Technical Lead',
-    category: 'core',
+    category: 'core2026leads',
     description: 'Building and nurturing our vibrant AI community.',
     linkedin: 'https://www.linkedin.com/in/ganesh-chowdary-jetti-614760344?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    imageUrl: '/images/team/Jetti Ganesh chowdary.jpg'
+  },
+  {
+    id: 39,
+    name: 'M. Adarsh Hanuma Sai',
+    role: 'Treasurer',
+    category: 'core2026leads',
+    description: 'Building and nurturing our vibrant AI community.',
+    linkedin: 'https://aiml-clubwebsite-dlzn.vercel.app/',
     imageUrl: '/images/team/Jetti Ganesh chowdary.jpg'
   },
 ];
