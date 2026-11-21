@@ -226,7 +226,7 @@ const currentMembers: TeamMember[] = [
     role: 'Editorial Team',
     category: 'core',
     description: 'Building and nurturing our vibrant AI community.',
-    linkedin: 'www.linkedin.com/in/mahesh-bolla-ab5b23358/',
+    linkedin: 'https://www.linkedin.com/in/mahesh-bolla-ab5b23358?utm_source=share_via&utm_content=profile&utm_medium=member_android',
     imageUrl: '/images/team/mahesh.jpg'
   },{
     id: 29,
@@ -294,17 +294,24 @@ const currentMembers: TeamMember[] = [
     description: 'assisting in various academic and administrative tasks.',
     linkedin: '',
     imageUrl: '/images/team/ajayram.jpg'
+  },{
+    id: 37,
+    name: 'G. Shanmukha Sai ',
+    role: 'Technical Lead',
+    category: 'core',
+    description: 'Building and nurturing our vibrant AI community.',
+    linkedin: 'https://www.linkedin.com/in/shanmukhasai-gembali-9280ab334?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    imageUrl: '/images/team/prabhas.jpeg'
   },
   {
-       id: 37,
-    name: 'Dr.R.Seeta Sireesha',
-    role: 'Associate Professor',
-    category: 'pastcoordinators',
-    description: 'assisting in various academic and administrative tasks.',
-    linkedin: '',
-    imageUrl: '/images/team/sitasirisha.jpeg'
-
-  }
+    id: 38,
+    name: 'J. Ganesh',
+    role: 'Technical Lead',
+    category: 'core',
+    description: 'Building and nurturing our vibrant AI community.',
+    linkedin: 'https://www.linkedin.com/in/ganesh-chowdary-jetti-614760344?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    imageUrl: '/images/team/Jetti Ganesh chowdary.jpg'
+  },
 ];
 
 const coreLeadRoles2026: Record<number, string> = {
@@ -319,6 +326,9 @@ const coreLeadRoles2026: Record<number, string> = {
   30: 'PR & Media Lead',
   31: 'PR & Media Lead',
   32: 'PR & Media Lead',
+  33: 'Logistics & Hospitality Lead',
+  34: 'Logistics & Hospitality Lead',
+  35: 'Treasurer',
 };
 
 const coreLeads2026 = currentMembers
@@ -335,7 +345,7 @@ const coreTeams2026: TeamMember[] = [
   {
     id: 54,
     name: 'Mohan Sai Krishna',
-    role: 'President',
+    role: 'Vice President',
     category: 'core2026teams',
     description: 'Core Team member for the 2026-27 academic year.',
     avatarColor: '#0891b2',
@@ -343,7 +353,7 @@ const coreTeams2026: TeamMember[] = [
   {
     id: 55,
     name: 'Sarvani Polam',
-    role: 'Secretary',
+    role: 'JointSecretary',
     category: 'core2026teams',
     description: 'Core Team member for the 2026-27 academic year.',
     avatarColor: '#059669',
