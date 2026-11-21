@@ -1,6 +1,6 @@
 import type { TeamMember } from '../shared/schema';
 
-const currentMembers: TeamMember[] = [
+export const teamMembers: TeamMember[] = [
   {
    id: 1,
     name: 'Dr. D Uma Devi',
@@ -52,6 +52,19 @@ const currentMembers: TeamMember[] = [
     linkedin: 'https://www.linkedin.com/in/madhavi-dasari-032b5a1b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
     imageUrl: '/images/team/madhavi.jpg'
   },
+  
+  {
+    id: 3,
+    name: 'Saripalli CK MahaLakshmi',
+    role: 'Assistant Professor',
+    category: 'faculty',
+    description: 'Expert in Machine Learning and Neural Networks with 15+ years of experience.',
+    linkedin: '',
+    imageUrl: '/images/team/lakshmi.jpg'
+  },
+  
+  
+ 
   
   {
     id: 8,
@@ -226,7 +239,7 @@ const currentMembers: TeamMember[] = [
     role: 'Editorial Team',
     category: 'core',
     description: 'Building and nurturing our vibrant AI community.',
-    linkedin: 'https://www.linkedin.com/in/mahesh-bolla-ab5b23358?utm_source=share_via&utm_content=profile&utm_medium=member_android',
+    linkedin: 'www.linkedin.com/in/mahesh-bolla-ab5b23358/',
     imageUrl: '/images/team/mahesh.jpg'
   },{
     id: 29,
@@ -260,6 +273,31 @@ const currentMembers: TeamMember[] = [
     description: 'Building and nurturing our vibrant AI community.',
     linkedin: 'https://www.linkedin.com/in/srisaiharshitagollapalli  ',
     imageUrl: '/images/team/harshitha.jpg'
+  },{
+    id: 33,
+    name: 'P.Sai Siva Kumar',
+    role: 'Logistics & Hospitality',
+    category: 'core',
+    description: 'Building and nurturing our vibrant AI community.',
+    linkedin: 'https://www.linkedin.com/in/sai-pandrinki-b11aa4394?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
+    imageUrl: '/images/team/shivakumar.jpg'
+  },{
+    id: 34,
+    name: 'V.Harsha Vardhan ',
+    role: 'Logistics & Hospitality',
+    category: 'core',
+    description: 'Building and nurturing our vibrant AI community.',
+    linkedin: 'https://www.linkedin.com/in/harsha-vardhan-881737395',
+ 
+    imageUrl: '/images/team/vaedhan.jpeg'
+  },{
+    id: 35,
+    name: 'G.Prabhas',
+    role: 'Executive Head',
+    category: 'core',
+    description: 'Building and nurturing our vibrant AI community.',
+    linkedin: 'https://www.linkedin.com/in/prabhas-gamini-85a93a2b7/',
+    imageUrl: '/images/team/prabhas.jpeg'
   },
   {
     id: 36,
@@ -269,183 +307,15 @@ const currentMembers: TeamMember[] = [
     description: 'assisting in various academic and administrative tasks.',
     linkedin: '',
     imageUrl: '/images/team/ajayram.jpg'
-  },{
-    id: 37,
-    name: 'G. Shanmukha Sai ',
-    role: 'Technical Lead',
-    category: 'core2026leads',
-    description: 'Building and nurturing our vibrant AI community.',
-    linkedin: 'https://www.linkedin.com/in/shanmukhasai-gembali-9280ab334?utm_source=share_via&utm_content=profile&utm_medium=member_android',
-    avatarColor: '#0891b2'
   },
   {
-    id: 38,
-    name: 'J. Ganesh',
-    role: 'Technical Lead',
-    category: 'core2026leads',
-    description: 'Building and nurturing our vibrant AI community.',
-    linkedin: 'https://www.linkedin.com/in/ganesh-chowdary-jetti-614760344?utm_source=share_via&utm_content=profile&utm_medium=member_android',
-    imageUrl: '/images/team/Jetti Ganesh chowdary.jpg'
-  },
-  {
-    id: 39,
-    name: 'M. Adarsh Hanuma Sai',
-    role: 'Treasurer',
-    category: 'core2026leads',
-    description: 'Building and nurturing our vibrant AI community.',
-    linkedin: 'https://aiml-clubwebsite-dlzn.vercel.app/',
-    avatarColor: '#059669'
-  },
-];
+       id: 37,
+    name: 'Dr.R.Seeta Sireesha',
+    role: 'Associate Professor',
+    category: 'pastcoordinators',
+    description: 'assisting in various academic and administrative tasks.',
+    linkedin: '',
+    imageUrl: '/images/team/sitasirisha.jpeg'
 
-const coreTeams2026: TeamMember[] = [
-  {
-    id: 54,
-    name: 'Mohan Sai Krishna',
-    role: 'Vice President',
-    category: 'core2026teams',
-    description: 'Core Team member for the 2026-27 academic year.',
-    avatarColor: '#0891b2',
-  },
-  {
-    id: 55,
-    name: 'Sarvani Polam',
-    role: 'JointSecretary',
-    category: 'core2026teams',
-    description: 'Core Team member for the 2026-27 academic year.',
-    avatarColor: '#059669',
-  },
-  {
-    id: 56,
-    name: 'Chaitanya',
-    role: 'Technical Team',
-    category: 'core2026teams',
-    description: 'Core Team member for the 2026-27 academic year.',
-    avatarColor: '#06b6d4',
-  },
-  {
-    id: 57,
-    name: 'Likitha',
-    role: 'Technical Team',
-    category: 'core2026teams',
-    description: 'Core Team member for the 2026-27 academic year.',
-    avatarColor: '#0891b2',
-  },
-  {
-    id: 58,
-    name: 'Karthikeya',
-    role: 'Technical Team',
-    category: 'core2026teams',
-    description: 'Core Team member for the 2026-27 academic year.',
-    avatarColor: '#059669',
-  },
-  {
-    id: 59,
-    name: 'D. Hiranmai',
-    role: 'Editorial Team',
-    category: 'core2026teams',
-    description: 'Core Team member for the 2026-27 academic year.',
-    avatarColor: '#06b6d4',
-  },
-  {
-    id: 60,
-    name: 'T. Jaswanth',
-    role: 'Editorial Team',
-    category: 'core2026teams',
-    description: 'Core Team member for the 2026-27 academic year.',
-    avatarColor: '#0891b2',
-  },
-  {
-    id: 61,
-    name: 'M. Sowmya',
-    role: 'Editorial Team',
-    category: 'core2026teams',
-    description: 'Core Team member for the 2026-27 academic year.',
-    avatarColor: '#059669',
-  },
-  {
-    id: 62,
-    name: 'Padmalochan',
-    role: 'Creative Content Team',
-    category: 'core2026teams',
-    description: 'Core Team member for the 2026-27 academic year.',
-    avatarColor: '#06b6d4',
-  },
-  {
-    id: 63,
-    name: 'Nischal',
-    role: 'Creative Content Team',
-    category: 'core2026teams',
-    description: 'Core Team member for the 2026-27 academic year.',
-    avatarColor: '#0891b2',
-  },
-  {
-    id: 64,
-    name: 'Sohit Kumar',
-    role: 'Creative Content Team',
-    category: 'core2026teams',
-    description: 'Core Team member for the 2026-27 academic year.',
-    avatarColor: '#059669',
-  },
-  {
-    id: 65,
-    name: 'Vishnu',
-    role: 'Logistics Team',
-    category: 'core2026teams',
-    description: 'Core Team member for the 2026-27 academic year.',
-    avatarColor: '#06b6d4',
-  },
-  {
-    id: 66,
-    name: 'Likith',
-    role: 'Logistics Team',
-    category: 'core2026teams',
-    description: 'Core Team member for the 2026-27 academic year.',
-    avatarColor: '#0891b2',
-  },
-  {
-    id: 67,
-    name: 'D. Thanushya',
-    role: 'Logistics Team',
-    category: 'core2026teams',
-    description: 'Core Team member for the 2026-27 academic year.',
-    avatarColor: '#059669',
-  },
-  {
-    id: 68,
-    name: 'L. Eswara Lakshmi',
-    role: 'Logistics Team',
-    category: 'core2026teams',
-    description: 'Core Team member for the 2026-27 academic year.',
-    avatarColor: '#06b6d4',
-  },
-  {
-    id: 69,
-    name: 'Hemanth',
-    role: 'PR and Media Team',
-    category: 'core2026teams',
-    description: 'Core Team member for the 2026-27 academic year.',
-    avatarColor: '#0891b2',
-  },
-  {
-    id: 70,
-    name: 'Dharma Teja',
-    role: 'PR and Media Team',
-    category: 'core2026teams',
-    description: 'Core Team member for the 2026-27 academic year.',
-    avatarColor: '#059669',
-  },
-  {
-    id: 71,
-    name: 'Farhan',
-    role: 'PR and Media Team',
-    category: 'core2026teams',
-    description: 'Core Team member for the 2026-27 academic year.',
-    avatarColor: '#06b6d4',
-  },
-];
-
-export const teamMembers: TeamMember[] = [
-  ...currentMembers,
-  ...coreTeams2026,
+  }
 ];
