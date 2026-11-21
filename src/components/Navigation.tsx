@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import logo2 from '../assets/logo2.png';
 //whatsapp logo
-import { FaLinkedin, FaInstagram, FaEnvelope ,FaWhatsapp} from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaEnvelope, FaWhatsapp, FaMoon, FaSun } from 'react-icons/fa';
 import { HiMenu, HiX } from 'react-icons/hi';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -27,6 +27,16 @@ export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) return savedTheme === 'dark';
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  });
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', isDarkMode);
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+  }, [isDarkMode]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -116,6 +126,15 @@ export default function Navigation() {
 
             {/* Social Icons */}
             <div className="hidden lg:flex items-center space-x-3">
+              <button
+                type="button"
+                onClick={() => setIsDarkMode((current) => !current)}
+                className="theme-toggle w-9 h-9 rounded-full flex items-center justify-center text-[#475569] bg-[#f1f5f9] hover:bg-gradient-to-r hover:from-[#0891b2] hover:to-[#059669] hover:text-white transition-all duration-300"
+                aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+                data-testid="button-theme-toggle"
+              >
+                {isDarkMode ? <FaSun className="w-4 h-4" /> : <FaMoon className="w-4 h-4" />}
+              </button>
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
@@ -217,6 +236,15 @@ export default function Navigation() {
                 <div className="pt-6 border-t border-[#e2e8f0]">
                   <p className="text-sm text-[#94a3b8] mb-4">Connect with us</p>
                   <div className="flex space-x-3">
+                    <button
+                      type="button"
+                      onClick={() => setIsDarkMode((current) => !current)}
+                      className="theme-toggle w-10 h-10 rounded-full flex items-center justify-center bg-[#f1f5f9] text-[#475569] hover:bg-gradient-to-r hover:from-[#0891b2] hover:to-[#059669] hover:text-white transition-all duration-300"
+                      aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+                      data-testid="button-mobile-theme-toggle"
+                    >
+                      {isDarkMode ? <FaSun className="w-5 h-5" /> : <FaMoon className="w-5 h-5" />}
+                    </button>
                     {socialLinks.map((social) => (
                       <a
                         key={social.label}
