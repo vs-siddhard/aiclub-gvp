@@ -54,19 +54,6 @@ export const teamMembers: TeamMember[] = [
   },
   
   {
-    id: 3,
-    name: 'Saripalli CK MahaLakshmi',
-    role: 'Assistant Professor',
-    category: 'faculty',
-    description: 'Expert in Machine Learning and Neural Networks with 15+ years of experience.',
-    linkedin: '',
-    imageUrl: '/images/team/lakshmi.jpg'
-  },
-  
-  
- 
-  
-  {
     id: 8,
     name: 'SK.Abdul Razaq',
     role: 'President',
